@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import { sonyPsPictures } from "../../services/sonyPsService/sonyPsService";
-import { sonyPsHeader } from "../../services/sonyPsService/sonyPsHeaderService";
+import {
+  sonyPsPictures,
+  sonyPsHeader,
+} from "../../services/sonyPsService/sonyPsService";
 import HeaderH1 from "../common/header-h1";
 import SlideShow from "../common/slideShow";
 import PsVedio from "./playstationContent/psVedio";
 import LightningSpeed from "./playstationContent/lightningSpeed";
+import StunningGames from "./playstationContent/stunningGames";
 
 class Playstation extends Component {
   state = {
@@ -28,6 +31,7 @@ class Playstation extends Component {
         <SlideShow pics4slideShow={pics4slideShow} arrowColor={arrowColor} />
         <PsVedio />
         <LightningSpeed />
+        <StunningGames />
       </div>
     );
   }

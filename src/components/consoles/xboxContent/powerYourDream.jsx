@@ -1,19 +1,24 @@
 import React, { Component } from "react";
-import { xboxPowerYourDream } from "../../../services/xboxService/xboxPowerYourDreamService";
+import {
+  xboxPowerYourDream,
+  xboxPowerYourDreamBGP,
+} from "../../../services/xboxService/powerYourDreamService";
 
 class PowerYourDream extends Component {
   state = {
     powerYouDremContent: [],
+    bgp: {},
   };
 
   componentDidMount() {
     this.setState({
       powerYouDremContent: xboxPowerYourDream(),
+      bgp: xboxPowerYourDreamBGP(),
     });
   }
 
   render() {
-    const { powerYouDremContent } = this.state;
+    const { powerYouDremContent, bgp } = this.state;
     return (
       <React.Fragment>
         <div className="m-5 w-50 mx-auto border-bottom border-success ">
@@ -27,11 +32,10 @@ class PowerYourDream extends Component {
         <div
           className="text-center  img-fluid"
           style={{
-            backgroundImage:
-              "url('https://i.ytimg.com/vi/rFh2i4AlPD4/maxresdefault.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
+            backgroundImage: bgp.imgUrl,
+            backgroundRepeat: bgp.bgr,
+            backgroundPosition: bgp.bgp,
+            backgroundSize: bgp.bgs,
           }}
         >
           <div className="pt-5">

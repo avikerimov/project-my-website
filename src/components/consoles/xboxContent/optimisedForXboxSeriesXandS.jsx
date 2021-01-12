@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { optimisedForXboxOptions } from '../../../services/xboxService/xboxOptimisedForXboxOptions';
-import { optimisedForXboxPicContent } from '../../../services/xboxService/xboxOptimisedForXboxPicContent';
+import {
+  optimisedForXboxOptions,
+  optimisedForXboxPicContent,
+} from "../../../services/xboxService/optimisedForXboxOptions";
 
 class OptimisedForXbox extends Component {
   state = {

@@ -56,8 +56,8 @@ export const sonyPsMainVideo = () => {
 export const sonyPsBGPVideo = () => {
   return {
     bgpVideoUrl: "url('https://destructoid.com/ul/593551-PS5-event.jpg')",
-    pgRepeat: "no-repeat",
-    pgPosition: "center",
-    pgSize: "cover",
+    pgr: "no-repeat",
+    pgp: "center",
+    pgs: "cover",
   };
 };

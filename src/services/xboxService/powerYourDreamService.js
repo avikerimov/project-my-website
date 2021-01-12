@@ -38,3 +38,12 @@ export const xboxPowerYourDream = () => {
     },
   ];
 };
+
+export const xboxPowerYourDreamBGP = () => {
+  return {
+    imgUrl: "url('https://i.ytimg.com/vi/rFh2i4AlPD4/maxresdefault.jpg')",
+    bgr: "no-repeat",
+    bgp: "center",
+    bgs: "cover",
+  };
+};

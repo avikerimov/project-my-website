@@ -1,41 +1,42 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {
+  gamepassIcon,
+  gamepassBGP,
+} from "../../../services/xboxService/gamepassService";
 
 class GamePass extends Component {
   state = {
-    
+    icon: {},
+    bgp: {},
   };
 
-  
+  componentDidMount() {
+    this.setState({
+      icon: gamepassIcon(),
+      bgp: gamepassBGP(),
+    });
+  }
 
   render() {
-    
+    const { icon, bgp } = this.state;
     return (
       <React.Fragment>
         <div
           className="text-center  img-fluid"
           style={{
             backgroundImage:
-              "url('https://cdn.vox-cdn.com/thumbor/yDJZfybQ_O5tD-Vc5gPB7amzAyo=/0x0:2085x1040/1400x933/filters:focal(879x324:1211x656):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65363409/6Krbuy0.0.jpg')",
-            backgroundRepeat: "no-repeat",
-            // height: "700px",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
+              bgp.imgUrl,
+            backgroundRepeat: bgp.bgr,
+            backgroundPosition: bgp.bgp,
+            backgroundSize: bgp.bgs,
           }}
         >
-          <div
-            className="mt-5"
-            style={{
-              paddingTop: "400px",
-              color: "white",
-              backgroundColor: "#00000040",
-              paddingBottom: "100px",
-            }}
-          >
+          <div className="mt-5 gamepass">
             <img
-              src="https://compass-ssl.xbox.com/assets/94/53/9453f2c1-ad03-4c98-bea1-858afe487645.svg?n=10202018_Super-Hero-768_XGP-Logo-White-Stacked_162x79.svg"
-              alt=""
-              width="200"
+              src={icon.imgUrl}
+              alt={icon.imgAlt}
+              width={icon.imgWidth}
               className="pb-5"
             />
             <h3 style={{ fontWeight: "bolder", fontSize: "2.8em" }}>

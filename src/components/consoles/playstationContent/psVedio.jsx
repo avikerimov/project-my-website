@@ -3,23 +3,23 @@ import {
   sonyPsSmallVideo,
   sonyPsMainVideo,
   sonyPsBGPVideo,
-} from "../../../services/sonyPsService/sonyPsVideoService";
+} from "../../../services/sonyPsService/psVideoService";
 
 class PsVedio extends Component {
   state = {
     smallVideos: [],
     mainVideo: {},
-    bgPic:{}
+    bgp:{}
   };
   componentDidMount() {
     this.setState({
       smallVideos: sonyPsSmallVideo(),
       mainVideo: sonyPsMainVideo(),
-      bgPic: sonyPsBGPVideo(),
+      bgp: sonyPsBGPVideo(),
     });
   }
   render() {
-    const { smallVideos, mainVideo, bgPic } = this.state;
+    const { smallVideos, mainVideo, bgp } = this.state;
     return (
       <React.Fragment>
         <hr className="my-5" />
@@ -32,10 +32,10 @@ class PsVedio extends Component {
         </div>
         <div
           style={{
-            backgroundImage: bgPic.bgpVideoUrl,
-            backgroundRepeat: bgPic.pgRepeat,
-            backgroundPosition: bgPic.pgPosition,
-            backgroundSize: bgPic.pgSize,
+            backgroundImage: bgp.bgpVideoUrl,
+            backgroundRepeat: bgp.pgr,
+            backgroundPosition: bgp.pgp,
+            backgroundSize: bgp.pgs,
           }}
         >
           <div className="row pl-3 mb-5 pt-5 videoContainer">

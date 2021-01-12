@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { xboxPictures } from "../../services/xboxService/xboxService";
-import { xboxHeader } from "../../services/xboxService/xboxHeaderService";
+import {
+  xboxPictures,
+  xboxHeader,
+} from "../../services/xboxService/xboxService";
 import HeaderH1 from "../common/header-h1";
 import SlideShow from "../common/slideShow";
 import PowerYourDream from "./xboxContent/powerYourDream";
