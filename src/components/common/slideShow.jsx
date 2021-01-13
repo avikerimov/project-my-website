@@ -11,13 +11,14 @@ const SlideShow = ({pics4slideShow, arrowColor, mainColor}) => {
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            className="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          {pics4slideShow.map((pic) => (
+            <li
+              key={pic.picNum}
+              data-target="#carouselExampleIndicators"
+              data-slide-to={pic.picNum}
+              className="active"
+            ></li>
+          ))}
         </ol>
         <div className="carousel-inner">
           {pics4slideShow.map((pic) => (
@@ -37,14 +38,25 @@ const SlideShow = ({pics4slideShow, arrowColor, mainColor}) => {
                   borderRadius: "10px",
                 }}
               >
-                <h3 className={pic.color}>{pic.header3}</h3>
-                <h5 className="text-white">{pic.header5}</h5>
+                <h3
+                  style={{ color: `${pic.color}` }}
+                  className={pic.colorClass}
+                >
+                  {pic.header3}
+                </h3>
+                <h5 className={pic.colorText ? pic.colorText : "text-white"}>
+                  {pic.header5}
+                </h5>
                 <button
                   type="button"
                   className="infoBtn"
                   style={{ color: `${mainColor}` }}
                 >
-                  <Link to="" className={pic.color}>
+                  <Link
+                    style={{ color: `${pic.color}` }}
+                    to=""
+                    className={pic.learnMoreColor ? pic.learnMoreColor : pic.colorClass}
+                  >
                     <span>Learn More</span>
                   </Link>
                 </button>
@@ -68,7 +80,7 @@ const SlideShow = ({pics4slideShow, arrowColor, mainColor}) => {
               aria-hidden="true"
               style={{ fontSize: "35px" }}
             ></i>
-          </span>          
+          </span>
           <span className="sr-only">Previous</span>
         </a>
         <a
@@ -87,7 +99,7 @@ const SlideShow = ({pics4slideShow, arrowColor, mainColor}) => {
               aria-hidden="true"
               style={{ fontSize: "35px" }}
             ></i>
-          </span>          
+          </span>
           <span className="sr-only">Next</span>
         </a>
       </div>

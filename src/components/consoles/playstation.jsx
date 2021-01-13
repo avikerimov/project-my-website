@@ -8,6 +8,7 @@ import SlideShow from "../common/slideShow";
 import PsVedio from "./playstationContent/psVedio";
 import LightningSpeed from "./playstationContent/lightningSpeed";
 import StunningGames from "./playstationContent/stunningGames";
+import Ps5Consoles from "./playstationContent/ps5Consoles";
 
 class Playstation extends Component {
   state = {
@@ -32,6 +33,7 @@ class Playstation extends Component {
         <PsVedio />
         <LightningSpeed />
         <StunningGames />
+        <Ps5Consoles />
       </div>
     );
   }

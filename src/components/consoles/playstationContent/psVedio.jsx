@@ -51,7 +51,7 @@ class PsVedio extends Component {
             </div>
           </div>
           {/* Small Videos */}
-          <div className="row">
+          <div className="row pb-4">
             {smallVideos.map((video) => (
               <div key={video.videoNum} className="col-6 col-lg-3 text-center ">
                 <iframe
