@@ -28,12 +28,10 @@ export function getAllAds() {
 export async function toggleFavoriteAd(adId) {
   try {
     await http.patch(`${apiUrl}/users/favorite-ads/${adId}`);
-    // console.log(adId);
     let action;
 
     let currentFavAd = JSON.parse(localStorage.getItem("favorites"));
     console.log(currentFavAd);
-    // let currentFavAd = getMyFavoriteAds();
 
     if (currentFavAd.includes(adId)) {
       console.log("else: " + adId);
@@ -48,7 +46,6 @@ export async function toggleFavoriteAd(adId) {
     localStorage.setItem("favorites", JSON.stringify(currentFavAd));
     return action;
   } catch (ex) {
-    // console.log(ex);
   }
 }
 

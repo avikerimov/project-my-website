@@ -8,7 +8,7 @@ export const sonyPsPictures = () => {
       header5: "Play Has No Limits",
       picNum: 1,
       active: true,
-      color: "text-primary",
+      colorClass: "text-primary",
       
     },
     {
@@ -18,7 +18,7 @@ export const sonyPsPictures = () => {
       header3: "PS5 Digital Edition",
       header5: "The Future of Play Starts Now.",
       picNum: 2,
-      color: "text-primary",
+      colorClass: "text-primary",
       
     },
     {
@@ -28,7 +28,7 @@ export const sonyPsPictures = () => {
       header3: "PS5 Console",
       header5: "It's Time to Play!",
       picNum: 3,
-      color: "text-primary",
+      colorClass: "text-primary",
       
     },
   ];

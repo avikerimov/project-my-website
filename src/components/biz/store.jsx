@@ -26,8 +26,8 @@ class Store extends Component {
       headerH1Data: {
         color: "text-dark",
         bgColor: "bg-warning",
-        titleLine1: "Everything that you love",
-        titleLine2: "in one place",
+        titleLine1: "Enjoy exclusive deals",
+        titleLine2: "from GadgetShop",
       },
     });
   }
@@ -76,9 +76,6 @@ class Store extends Component {
     return (
       <div className="container">
         <HeaderH1 headerH1Data={headerH1Data} />
-        {/* <p className="m1-3 text-info text-center">
-          <b>Create, Manage and Edit your ad's</b>
-        </p> */}
         <div className="col text-right">
           <i className="fas fa-search mr-2"></i>
           <input

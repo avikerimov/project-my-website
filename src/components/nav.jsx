@@ -14,8 +14,7 @@ class Nav extends Component {
         <li className="nav-item">
           <NavLink
             className={`nav-link ${navColor} m-1`}
-            to="/playstation"
-            // style={{ color: `${color}` }}
+            to="#"
           >
             {title1}
           </NavLink>
@@ -23,8 +22,7 @@ class Nav extends Component {
         <li className="nav-item">
           <NavLink
             className={`nav-link ${navColor} m-1`}
-            to={{search:`${nav2}`}}
-            // style={{ color: `${color}` }}
+            to="#"
           >
             {title2}
           </NavLink>
@@ -32,8 +30,7 @@ class Nav extends Component {
         <li className="nav-item">
           <NavLink
             className={`nav-link ${navColor} m-1`}
-            to="/login"
-            // style={{ color: `${color}` }}
+            to="#"
           >
             {title3}
           </NavLink>

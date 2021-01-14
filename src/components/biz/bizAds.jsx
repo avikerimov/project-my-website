@@ -3,6 +3,7 @@ import adService from "../../services/service/adService";
 import Ad from "./ad";
 import Swal from "sweetalert2";
 
+//Component that handel only about the Delete Button
 class BizAds extends Component {
   state = {
     ads: [],
@@ -10,10 +11,12 @@ class BizAds extends Component {
 
   async componentDidMount() {
     const { data } = await adService.getMyAds();
-    // console.log(data);
     if (data.length > 0) this.setState({ ads: data });
   }
 
+  /* Function Delete: popup SWAL notfiction that asks if you sure about deleting this AD
+  if Yes popup SWAL notfiction that it was deleted successfully
+  if not popup SWAL notfiction that it wasn't deleted */
   handleAdDelete = async (adId, event) => {
     event.preventDefault();
     const mySwal = Swal.mixin({
@@ -41,14 +44,13 @@ class BizAds extends Component {
           this.setState({ ads });
           await adService.deleteAd(adId);
           mySwal.fire("Deleted!", "Your ad has been deleted.", "success");
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
           mySwal.fire("Cancelled", "Your ad is safe :)", "error");
         }
       });
   };
+
+  /* ------------------------------------------------------------------------ */
 
   render() {
     const { ads } = this.state;
@@ -58,7 +60,6 @@ class BizAds extends Component {
           {ads.length > 0 &&
             ads.map((ad) => (
               <div className="col-md-6 mb-5 min-hight">
-                {/* {console.log(ad)} */}
                 <Ad key={ad._id} ad={ad} handleAdDelete={this.handleAdDelete} />
               </div>
             ))}

@@ -46,9 +46,7 @@ class EditAd extends Form {
 
   async componentDidMount() {
     const adId = this.props.match.params.id;
-    // console.log(adId);
     const { data } = await adService.getAd(adId);
-    // console.log(data);
     this.setState({ data: this.mapToViewModel(data) });
   }
 
@@ -68,7 +66,6 @@ class EditAd extends Form {
 
   doSubmit = async () => {
     const { data } = this.state;
-    // if (!data.bizImage) delete data.bizImage;
     await adService.editAd(data);
     toast.success("Your ad has been updated");
     this.props.history.replace("/my-store");
@@ -79,11 +76,6 @@ class EditAd extends Form {
     return (
       <div className="container">
         <HeaderH1 headerH1Data={headerH1Data} />
-        {/* <div className="row">
-          <div className="col-12">
-            <p>lorem</p>
-          </div>
-        </div> */}
         <div className="row">
           <div className="col-12">
             <Link className="btn btn-secondary" to="/my-store">

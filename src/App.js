@@ -21,6 +21,7 @@ import EditAd from "./components/biz/editAd";
 import Store from "./components/biz/store";
 import UserFavorites from "./components/biz/userFavorites";
 import UserProtectedRoute from "./components/common/userProtectedRoute";
+import Footer from "./components/footer";
 
 class App extends Component {
   state = {};
@@ -40,7 +41,7 @@ class App extends Component {
           <Navbar user={user} />
         </header>
 
-        <main className="minh-900">
+        <main className="min-h-900">
           <Switch>
             <BizProtectedRoute
               path="/my-store"
@@ -75,7 +76,9 @@ class App extends Component {
           </Switch>
         </main>
 
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </React.Fragment>
     );
   }

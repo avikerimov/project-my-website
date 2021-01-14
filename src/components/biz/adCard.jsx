@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import userService from "../../services/service/userService";
 
+//Component that show the AD as card
 class AdCard extends Component {
   state = {};
   componentDidMount() {
@@ -13,6 +14,7 @@ class AdCard extends Component {
     const { user } = this.state;
     return (
       <div className="card">
+        {/* Product Image */}
         <img
           className="card-img-top"
           width="100"
@@ -20,12 +22,14 @@ class AdCard extends Component {
           alt={ad.productName}
         />
         <div className="card-body text-center">
+          {/* Company Logo */}
           <img
             className="mx-auto"
             width="100"
             src={ad.companyLogo}
             alt={ad.companyName}
           />
+          {/* Main AD details */}
           <h5 className="card-title">
             <b>{ad.productName}</b>
           </h5>
@@ -80,7 +84,7 @@ class AdCard extends Component {
             </div>
           </div>
         </div>
-
+        {/* Footer of the AD */}
         <div className="card-footer p-0">
           <div className="row text-center">
             <div className="col-4">

@@ -57,7 +57,7 @@ class BizRegistration extends Form {
 
     try {
       await http.post(`${apiUrl}/biz-users`, data);
-      toast("Your Business Account has been created successfuly");
+      toast.success("Your account has been created successfully");
       this.props.history.replace("/biz-login");
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
@@ -122,7 +122,7 @@ class BizRegistration extends Form {
                 "phoneNumber",
                 "Business Client/Company Phone Number"
               )}
-              {this.renderInput("companyLogo", "Business Image URL")}
+              {this.renderInput("companyLogo", "Business Logo Image URL")}
               {this.renderButton("Register", "fas fa-file-signature", "btn-primary")}
             </form>
           </div>

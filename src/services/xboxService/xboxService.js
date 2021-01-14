@@ -7,7 +7,7 @@ export const xboxPictures = () => {
       header5: "Dream of Better in Every Way",
       picNum: 1,
       active: true,
-      color: "text-success",
+      colorClass: "text-success",
       
     },
     {
@@ -17,7 +17,7 @@ export const xboxPictures = () => {
       header3: "XBOX SERIES X",
       header5: "The fastest, most powerful Xbox ever.",
       picNum: 2,
-      color: "text-success",
+      colorClass: "text-success",
       
     },
     {
@@ -27,7 +27,7 @@ export const xboxPictures = () => {
       header3: "XBOX SERIES S",
       header5: "Next-gen performance in the smallest Xbox ever.",
       picNum: 3,
-      color: "text-success",
+      colorClass: "text-success",
       
     },
   ];

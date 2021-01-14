@@ -30,7 +30,7 @@ class Register extends Form {
     
     try {
       await http.post(`${apiUrl}/users`, data);
-      toast.success("You successfuly registred");
+      toast.success("You successfully registred");
       this.props.history.replace("/login");
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {

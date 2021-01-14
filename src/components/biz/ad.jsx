@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import userService from "../../services/service/userService";
 
+//Component that show the AD as row
 class Ad extends Component {
   state = {};
   componentDidMount() {
@@ -17,14 +18,15 @@ class Ad extends Component {
           <div className="col-4  border-right">
             <div className="row">
               <div className="col-12">
+                {/* Product Image */}
                 <img
-                  className=""
                   style={{ maxHeight: 180, maxWidth: 300 }}
                   src={ad.productImg}
                   alt={ad.productName}
                 />
               </div>
             </div>
+            {/* Company Logo */}
             <div className="row">
               <div className="col-12">
                 <img
@@ -36,6 +38,7 @@ class Ad extends Component {
               </div>
             </div>
           </div>
+          {/* Main AD details */}
           <div className="col">
             <h4>
               <b>{ad.productName}</b>
@@ -79,7 +82,7 @@ class Ad extends Component {
                   </React.Fragment>
                 )}
                 {/* -------------------------------- */}
-                {/* BizUser show (Star) Favorite button */}
+                {/* if BizUser show (Star) Favorite button */}
                 {user && user.biz && (
                   <div className=" text-muted">
                     <b>Add to Favorites</b>
@@ -92,6 +95,7 @@ class Ad extends Component {
             </div>
           </div>
         </div>
+        {/* Footer of the AD */}
         <div
           className="row border text-center"
           style={{ backgroundColor: "#f8f8f8" }}

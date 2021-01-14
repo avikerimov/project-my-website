@@ -15,7 +15,6 @@ class BizStore extends Component {
 
   async componentDidMount() {
     const { data } = await adService.getMyAds();
-    // console.log(data);
     if (data.length > 0) this.setState({ ads: data });
 
     this.setState({
@@ -62,7 +61,6 @@ class BizStore extends Component {
           await adService.deleteAd(adId);
           mySwal.fire("Deleted!", "Your ad has been deleted.", "success");
         } else if (
-          /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
         ) {
           mySwal.fire("Cancelled", "Your ad is safe :)", "error");
@@ -121,7 +119,6 @@ class BizStore extends Component {
             </div>
           ))}
 
-        {/* <BizAds /> */}
       </div>
     );
   }

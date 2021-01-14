@@ -25,7 +25,6 @@ class CreateAd extends Form {
   };
 
   schema = {
-    // _id: Joi.string(),
     companyName: Joi.string().min(2).max(255).required(),
     productName: Joi.string().min(2).max(255).required(),
     productDescription: Joi.string().min(2).max(1024).required(),
@@ -55,7 +54,6 @@ class CreateAd extends Form {
 
   mapToViewModel(data) {
     return {
-      // _id: data._id,
       companyName: data.companyName,
       storePhone: data.phoneNumber,
       companyLogo: data.companyLogo,
@@ -69,9 +67,8 @@ class CreateAd extends Form {
 
   doSubmit = async () => {
     const data = { ...this.state.data };
-    // if (!data.bizImage) delete data.bizImage;
     await adService.createAd(data);
-    toast("Your ad has been created");
+    toast.success("Your ad has been created");
     this.props.history.replace("/my-store");
   };
 
@@ -113,7 +110,7 @@ class CreateAd extends Form {
                 {this.renderInput("storeAddress", "Store Address")}
                 {this.renderInput("storePhone", "Store Phone")}
                 {this.renderInput("companyLogo", "Company Logo")}
-                {this.renderInput("productImg", "Product Img")}
+                {this.renderInput("productImg", "Product Image URL")}
                 {this.renderButton("Create Ad", "fas fa-vote-yea", "btn-primary")}
               </form>
             }

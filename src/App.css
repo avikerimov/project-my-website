@@ -58,6 +58,6 @@
   padding-bottom: 100px;
 }
 
-#xiaomi{
-  color: black ;
+.min-h-900{
+  min-height: 900px;
 }

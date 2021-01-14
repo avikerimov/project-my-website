@@ -7,7 +7,7 @@ export const nintendoPictures = () => {
       header5: "My Way to Play",
       picNum: 1,
       active: true,
-      color: "text-danger",
+      colorClass: "text-danger",
     },
     {
       imgUrl:
@@ -16,7 +16,7 @@ export const nintendoPictures = () => {
       header3: "NINTENDO SWITCH",
       header5: "Fully-featured for home and on-the-go gaming.",
       picNum: 2,
-      color: "text-danger",
+      colorClass: "text-danger",
     },
     {
       imgUrl: "https://pbs.twimg.com/media/EXbtSxGXgAAd9Vq.jpg:large",
@@ -24,7 +24,7 @@ export const nintendoPictures = () => {
       header3: "Nintendo Switch Lite",
       header5: "Dedicated to handheld play",
       picNum: 3,
-      color: "text-danger",
+      colorClass: "text-danger",
     },
   ];
 };

@@ -26,7 +26,6 @@ class Login extends Form {
     const { email, password } = this.state.data;
     try {
       await userService.userLogin(email, password);
-      // window.location = "/"
 
       toast.success("You logged in successfully!", {
         position: "top-center",

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import userService from "../../services/service/userService";
 
+//Component that checks if it is a logedin User (and not BizUzer)
 const UserProtectedRoute = ({
   path,
   component: Component,
